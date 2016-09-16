@@ -39,7 +39,7 @@ public class AbstractFigures2_1
          
          System.out.println();
          
-      }  // end of outer for loop
+      }  // end of outer for loop, prints one variable line of output 7 times
       
    }  // end of method main
    
