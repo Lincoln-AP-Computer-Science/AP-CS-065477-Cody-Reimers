@@ -1,4 +1,4 @@
-public class HourGlass
+public class HourGlass2_4
 {
    
    public static final int CONE_HEIGHT = 5;
@@ -23,18 +23,37 @@ public class HourGlass
          
          System.out.println("/");
          
-      }  /* end of outer loop, prints top half of hourglass,
+      }  /* end of outer loop, prints
+            top half of hourglass,
             excluding line 1 */
       
-      System.out.println("     ||     ");
+      for (int i = 1; i <= CONE_HEIGHT; i++)
+      {
+         System.out.print(" ");
+      }  // prints spaces before hourglass
+      
+      System.out.println("||");
+      
       for (int line = 1; line <= CONE_HEIGHT - 1; line++)
       {
       
-         for (int i = 1; i <= 5 - line; i++)
+         for (int i = 1; i <= CONE_HEIGHT - line; i++)
          {
+            System.out.print(" ");
          }
          
-      }
+         System.out.print("/");
+         for (int q = 1; q <= line * 2; q++)
+         {
+            System.out.print(":");
+         }
+         
+         System.out.println("\\");
+         
+      }  /* end of outer loop, prints
+            bottom half of hourglass,
+            excluding the final line. */
+            
       horizontal();
    
    }  // end of method main
