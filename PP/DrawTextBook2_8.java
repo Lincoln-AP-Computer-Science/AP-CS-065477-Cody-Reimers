@@ -1,7 +1,7 @@
 public class DrawTextBook2_8
 {
    
-   public static final int SIZE = 30;
+   public static final int SIZE = 10;
    
    public static void main(String[] args)
    {
