@@ -43,9 +43,9 @@ public class FracCalc
       int f1 = line.indexOf('/');
       String strInt1 = line.substring(0, s1);
       int int1 = Integer.parseInt(strInt1);
-      String strNum1 = line.substring(s1, f1);
+      String strNum1 = line.substring(s1+1, f1);
       int numerator1 = Integer.parseInt(strNum1);
-      String strDen1 = line.substring(f1, b1);
+      String strDen1 = line.substring(f1+1, b1);
       int denomenator1 = Integer.parseInt(strDen1);
       
       // Isolates the first operator
@@ -57,24 +57,28 @@ public class FracCalc
       int f2 = operand2.indexOf('/');
       String strInt2 = operand2.substring(0, s2);
       int int2 = Integer.parseInt(strInt2);
-      String strNum2 = operand2.substring(s2, f2);
+      String strNum2 = operand2.substring(s2+1, f2);
       int numerator2 = Integer.parseInt(strNum2);
-      String strDen2 = operand2.substring(f2);
+      String strDen2 = operand2.substring(f2+1);
       int denomenator2 = Integer.parseInt(strDen2);
       String solution = "null";
       
       if(operator1 == '+')
       {
          int intf = int1 + int2;
-         int numeratorf = numerator1 + numerator2;
-         int denomenatorf = denomenator1 + denomenator2;
+         int numeratorf = numerator1 * denomenator2 +
+            numerator2 * denomenator1;
+         int denomenatorf = denomenator1 * denomenator2;
+         intf += numeratorf / denomenatorf;
+         numeratorf %= denomenatorf; 
          solution = intf + "_" + numeratorf + "/" + denomenatorf;
       }
       else if(operator1 == '-')
       {
          int intf = int1 - int2;
-         int numeratorf = numerator1 - numerator2;
-         int denomenatorf = denomenator1 - denomenator2;
+         int numeratorf = numerator1 * denomenator2 -
+            numerator2 * denomenator1;
+         int denomenatorf = denomenator1 * denomenator2;
          solution = intf + "_" + numeratorf + "/" + denomenatorf;
       }
       else if(operator1 == '*')
