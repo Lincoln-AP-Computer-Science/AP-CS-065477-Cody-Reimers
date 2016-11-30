@@ -79,20 +79,34 @@ public class FracCalc
          int numeratorf = numerator1 * denomenator2 -
             numerator2 * denomenator1;
          int denomenatorf = denomenator1 * denomenator2;
+         intf -= 1;
+         numeratorf += denomenatorf;
+         intf += numeratorf / denomenatorf;
+         numeratorf %= denomenatorf;
          solution = intf + "_" + numeratorf + "/" + denomenatorf;
       }
       else if(operator1 == '*')
       {
-         int intf = int1 * int2;
-         int numeratorf = numerator1 * numerator2;
+         numerator1 += int1 * denomenator1;
+         numerator1 *= denomenator2;
+         numerator2 += int2 * denomenator2;
+         numerator2 *= denomenator1;
          int denomenatorf = denomenator1 * denomenator2;
+         int numeratorf = numerator1 * numerator2;
+         int intf = numeratorf / denomenatorf;
+         numeratorf %= denomenatorf;
          solution = intf + "_" + numeratorf + "/" + denomenatorf;
       }
       else if(operator1 == '/')
       {
-         int intf = int1 / int2;
-         int numeratorf = numerator1 / numerator2;
-         int denomenatorf = denomenator1 / denomenator2;
+         numerator1 += int1 * denomenator1;
+         numerator2 += int2 * denomenator2;
+         numerator1 *= numerator2;
+         denomenator2 *= denomenator1;
+         int denomenatorf = denomenator1 * numerator2;
+         int numeratorf = numerator1 * denomenator2;
+         int intf = numeratorf / denomenatorf;
+         numeratorf %= denomenatorf;
          solution = intf + "_" + numeratorf + "/" + denomenatorf;
       }
       
