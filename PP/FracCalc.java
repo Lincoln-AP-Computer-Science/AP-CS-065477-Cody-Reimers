@@ -27,14 +27,14 @@ public class FracCalc
          if (line.equalsIgnoreCase("quit"))
             break;
          
-         System.out.println(line + " = " + computeFractions(line));
+         System.out.println(line + " = " + produceAnswer(line));
          
       }  // end of while loop
       
    }  // end of method main
    
    // Evaluates equation and returns results to be printed.
-   public static String computeFractions(String line)
+   public static String produceAnswer(String line)
    {
       
       // Isolates the integers comprising mixed fraction 1
@@ -73,6 +73,7 @@ public class FracCalc
          numeratorf %= denomenatorf; 
          solution = intf + "_" + numeratorf + "/" + denomenatorf;
       }
+      
       else if(operator1 == '-')
       {
          int intf = int1 - int2;
@@ -85,24 +86,22 @@ public class FracCalc
          numeratorf %= denomenatorf;
          solution = intf + "_" + numeratorf + "/" + denomenatorf;
       }
+      
       else if(operator1 == '*')
       {
          numerator1 += int1 * denomenator1;
-         numerator1 *= denomenator2;
          numerator2 += int2 * denomenator2;
-         numerator2 *= denomenator1;
          int denomenatorf = denomenator1 * denomenator2;
          int numeratorf = numerator1 * numerator2;
          int intf = numeratorf / denomenatorf;
          numeratorf %= denomenatorf;
          solution = intf + "_" + numeratorf + "/" + denomenatorf;
       }
+      
       else if(operator1 == '/')
       {
          numerator1 += int1 * denomenator1;
          numerator2 += int2 * denomenator2;
-         numerator1 *= numerator2;
-         denomenator2 *= denomenator1;
          int denomenatorf = denomenator1 * numerator2;
          int numeratorf = numerator1 * denomenator2;
          int intf = numeratorf / denomenatorf;
