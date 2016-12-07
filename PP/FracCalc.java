@@ -12,6 +12,7 @@ public class FracCalc
          "perform\ncalculations with them.");
       System.out.println("Mixed fraction should be written like " +
          "\"0_3/4\",\nand please use only two operands.\n" +
+         "The fractions denomenator must be at least 1.\n" +1
          "Type \"quit\" when asked for an equation to end the program.\n");
       String line = "";
       Scanner kbd = new Scanner(System.in);
@@ -108,6 +109,8 @@ public class FracCalc
          numeratorf %= denomenatorf;
          solution = intf + "_" + numeratorf + "/" + denomenatorf;
       }
+      
+      solution = "whole: " + int2 + " numerator: " + numerator2 + " denomenator: " + denomenator2;
       
       return solution;
       
