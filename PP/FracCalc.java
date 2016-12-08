@@ -9,10 +9,8 @@ public class FracCalc
       // Introduce user to program and intialize program
       System.out.println("This program is a calculator designed to " +
          "take\nintegers, fractions, and mixed fractions, and " +
-         "perform\ncalculations with them.");
-      System.out.println("Mixed fraction should be written like " +
-         "\"0_3/4\",\nand please use only two operands.\n" +
-         "The fractions denomenator must be at least 1.\n" +1
+         "perform\ncalculations with them. Mixed fraction should be " +
+         "written\nlike \"0_3/4\". Declare a value of \"0\" as \"0_0/1\".\n" +
          "Type \"quit\" when asked for an equation to end the program.\n");
       String line = "";
       Scanner kbd = new Scanner(System.in);
