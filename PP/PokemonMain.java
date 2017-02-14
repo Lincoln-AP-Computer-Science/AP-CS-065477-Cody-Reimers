@@ -12,7 +12,8 @@ public class PokemonMain
    //versus the second, printing the result to the console
    public static void printHitPointsDifference(Pokemon pkmn1, Pokemon pkmn2)
    {
-      System.out.println(pkmn1 + " - " + pkmn2 + " = " + (pkmn1.getHitPoints() - pkmn2.getHitPoints() + " hit point difference"));
+      System.out.println("The difference between " + pkmn1 + "'s and " + pkmn2 +
+            "'s hit points is " + (pkmn1.getHitPoints() - pkmn2.getHitPoints()));
    }
    
 }
