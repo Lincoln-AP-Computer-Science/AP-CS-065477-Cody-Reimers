@@ -28,10 +28,10 @@ public class Pokemon
       return this.hitPoints;
    }
    
-   //Returns a String containing the object's name and current hitPoints value
+   //Returns a String containing the object's name
    public String toString()
    {
-      return pkmnName + ": " + hitPoints;
+      return pkmnName;
    }
    
 }
