@@ -1,23 +1,22 @@
-public class Cylinder implements Figure
+public class Cylinder extends Radial
 {
    
-   private double radius;
    private double height;
    
    public Cylinder(double r, double h)
    {
-      this.radius = r;
+      super(r);
       this.height = h;
    }
    
    public double getVolume()
    {
-      return Math.PI * Math.pow(radius, 2) * height;
+      return Math.PI * Math.pow(super.getRadius(), 2) * height;
    }
    
    public double getSurfaceArea()
    {
-      return 2 * (Math.PI * Math.pow(radius, 2)) + 2 * Math.PI * radius * height;
+      return 2 * (Math.PI * Math.pow(super.getRadius(), 2)) + 2 * Math.PI * super.getRadius() * height;
    }
    
 }

@@ -1,4 +1,4 @@
-public class Radial implements Figure
+public abstract class Radial implements Figure
 {
    
    private double radius;
@@ -13,14 +13,8 @@ public class Radial implements Figure
       return radius;
    }
    
-   public double getVolume()
-   {
-      return 0;
-   }
+   public abstract double getVolume();
    
-   public double getSurfaceArea()
-   {
-      return 0;
-   }
-   
+   public abstract double getSurfaceArea();
+      
 }

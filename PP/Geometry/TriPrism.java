@@ -1,7 +1,6 @@
-public class TriPrism implements Figure
+public class TriPrism extends Prism
 {
    
-   private double length;
    private double height;
    private double base1; //length of side of triangle perpendicular to height
    private double base2; //side clockwise of base1
@@ -9,7 +8,7 @@ public class TriPrism implements Figure
    
    public TriPrism(double l, double h, double b1, double b2, double b3)
    {
-      this.length = l;
+      super(l);
       this.height = h;
       this.base1 = b1;
       this.base2 = b2;
@@ -18,12 +17,13 @@ public class TriPrism implements Figure
    
    public double getVolume()
    {
-      return length * (0.5 * base1 * height);
+      return super.getLength() * (0.5 * base1 * height);
    }
    
    public double getSurfaceArea()
    {
-      return 2 * (0.5 * base1 * height) + length * (base1 + base2 + base3);
+      return 2 * (0.5 * base1 * height) +
+            super.getLength() * (base1 + base2 + base3);
    }
    
 }

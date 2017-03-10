@@ -1,21 +1,19 @@
-public class Cube implements Figure
+public class Cube extends Prism
 {
    
-   private double side; //length of one side
-   
-   public Cube(double s)
+   public Cube(double l)
    {
-      this.side = s;
+      super(l);
    }
    
    public double getSurfaceArea()
    {
-      return Math.pow(side, 2) * 6;
+      return Math.pow(super.getLength(), 2) * 6;
    }
    
    public double getVolume()
    {
-      return Math.pow(side, 3);
+      return Math.pow(super.getLength(), 3);
    }
    
 }

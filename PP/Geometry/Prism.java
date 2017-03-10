@@ -1,4 +1,4 @@
-public class Prism implements Figure
+public abstract class Prism implements Figure
 {
    
    private double length;
@@ -13,14 +13,8 @@ public class Prism implements Figure
       return length;
    }
    
-   public double getVolume()
-   {
-      return 0;
-   }
+   public abstract double getVolume();
    
-   public double getSurfaceArea()
-   {
-      return 0;
-   }
+   public abstract double getSurfaceArea();
    
 }
