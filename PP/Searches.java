@@ -12,7 +12,7 @@ public class Searches
       
       int loc2 = binarySearch(sortedNums, 77);
       System.out.print("Binary search: ");
-      System.out.print("The location is " + loc2);
+      System.out.println("The location is " + loc2);
       
       int loc3 = binarySearch(sortedNums, 76);
       System.out.print("Binary search: ");
@@ -22,7 +22,7 @@ public class Searches
    //used to perform a sequential search of a list of integers
    public static int indexOf(int[] list, int target)
    {
-      for(in i = 0; i < list.length; i++)
+      for(int i = 0; i < list.length; i++)
          if(list[i] == target)
             return i;
             
@@ -30,9 +30,25 @@ public class Searches
    }
    
    //used to perform a binary search of a list of integers
-   public static void binarySearch (int[] numbers, int target)
+   public static int binarySearch (int[] numbers, int target)
    {
       int min = 0;
       int max = numbers.length - 1;
+      
+      while (min <= max)
+      {
+         int mid = (min + max) / 2;
+         
+         if (numbers[mid] == target)
+            return mid; //found it
+         else if (numbers[mid] < target)
+            min = mid + 1; //too small
+         else //numbers[mid] > target
+            max = mid - 1; //too large
+            
       }
-      }
+      
+      return -1; //number not found in list
+   }
+   
+}
