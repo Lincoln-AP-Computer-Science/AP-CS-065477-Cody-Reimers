@@ -5,6 +5,7 @@ public class LucasRecursion
    {
       System.out.print("Lucas Numbers are like Fibonacci Numbers,\nbut with a difference:");
       System.out.println("the Lucas Numbers\nstart with 2, 1, and 3 instead of 0, 1, and 1.");
+      System.out.println("The 2nd Lucas Number is: " + lucas(2));
       System.out.println("The 6th Lucas Number is: " + lucas(6));
       System.out.println("The 9th Lucas Number is: " + lucas(9));
       System.out.println("The 15th Lucas Number is: " + lucas(15));
