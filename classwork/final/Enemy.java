@@ -8,13 +8,14 @@ public abstract class Enemy
    private int score; //how much score the enemy is worth
    private Bullets aim;
    
-   public Enemy(int h, int a, Art texture, Path p, int s)
+   public Enemy(int h, int a, Art texture, Path p, int s, Bullets aim)
    {
       health = h;
       ammo = a;
       enemyTexture = texture;
       path = p;
       score = s;
+      this.aim = aim;
    }
    
    public int getHealth()
@@ -36,5 +37,3 @@ public abstract class Enemy
    {health -= damage;}
    
 }
-   
-   
