@@ -10,9 +10,13 @@ public class Path
       this.path = this.create(corners);
    }
    
-   //returns the ArrayList of Locations in the path
+   //returns the completed Path
    public ArrayList<Location> getPath()
-   { return path;}
+   {  return path;}
+   
+   //returns the Location at index within the completed Path
+   public Location getLocation(int index)
+   { return path.get(index);}
    
    //precondition: all Locations in corners are rounded
    private ArrayList<Location> create(ArrayList<Location> corners)

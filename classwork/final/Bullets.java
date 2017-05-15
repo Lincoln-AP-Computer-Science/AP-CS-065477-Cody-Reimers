@@ -13,7 +13,7 @@ public class Bullets extends Path
       hitbox = this.modify(mods);
    }
    
-   public int getDamage();
+   public int getDamage()
    {  return damage;}
    
    public int[] getHitbox()
@@ -24,7 +24,8 @@ public class Bullets extends Path
    
    private int[] modify(int[] mods)
    {
-      ArrayList<Location> basicHitbox = super.path;
+      ArrayList<Location> basicHitbox = super.getPath();
+         
    }
    
 }
